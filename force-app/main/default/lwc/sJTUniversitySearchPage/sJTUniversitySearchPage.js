@@ -1,7 +1,7 @@
 import { LightningElement, track } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
-import getTopHeadersData from '@salesforce/apex/SJTC.getTopHeadersData';
-import getUniversityWiseData from '@salesforce/apex/SJTC.getUniversityWiseData';
+import getTopHeadersData from '@salesforce/apex/SJTrackerController.getTopHeadersData';
+import getUniversityWiseData from '@salesforce/apex/SJTrackerController.getUniversityWiseData';
 
 export default class SJTUniversitySearchPage extends NavigationMixin(LightningElement) {
     @track totalUniversities = 0;
