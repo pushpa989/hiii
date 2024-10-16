@@ -1,0 +1,36 @@
+<template>
+    <div class="pagination-wrapper slds-grid slds-align_absolute-center">
+        <!-- Page Number Display -->
+        <div class="slds-col page-number">
+            <p>Page <span style="padding-left: 9px;"><strong>{currentPage}</strong></span></p>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="slds-col pagination-controls slds-grid slds-align_absolute-center">
+            <!-- Previous Button -->
+            <lightning-button-icon 
+                icon-name="utility:chevronleft" 
+                alternative-text="Previous" 
+                variant="bare" 
+                onclick={handlePreviousPage} 
+                disabled={isFirstPage}>
+            </lightning-button-icon>
+
+            <!-- Pagination Numbers -->
+            <template for:each={pageList} for:item="page">
+                <span key={page} class="pagination-item" style="margin: 0 5px; cursor: pointer;" data-page={page} onclick={handlePageClick}>
+                    {page}
+                </span>
+            </template>
+
+            <!-- Next Button -->
+            <lightning-button-icon 
+                icon-name="utility:chevronright" 
+                alternative-text="Next" 
+                variant="bare" 
+                onclick={handleNextPage} 
+                disabled={isLastPage}>
+            </lightning-button-icon>
+        </div>
+    </div>
+</template>
