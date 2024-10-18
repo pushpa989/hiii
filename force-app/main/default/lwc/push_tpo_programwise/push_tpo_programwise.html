@@ -1,0 +1,108 @@
+<template>
+    <div class="mainContainer">
+        <template if:true={showSpinner}>
+            <lightning-spinner alternative-text="Loading..." variant="brand"></lightning-spinner>
+        </template>
+        
+        <div class="d-flex">
+            <div class="go-back" onclick={handleGoBack}>
+                <img src={goBackArrowIcon} alt="Go Back" style="width: 20px; height: 20px; margin-right: 5px;" />
+                <a href="javascript:void(0);" style="color: #000; margin-left: -9px;font-family: Poppins;font-size: 14px;font-style: normal;font-weight: 400;line-height: normal;">Go Back</a>
+            </div>
+            <div class="align-buttons">
+                <div class="university-info" style="margin-left: 10px;">
+                    <p>University Name / ID: {selectedUniversity}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-grid slds-wrap filter-section" style="margin-top: -18px; padding-bottom: 17px;">
+            <div class="dropdown">
+                <lightning-button label={selectedProgramLabel} onclick={toggleDropdown}></lightning-button>
+                
+                <template if:true={isDropdownOpen}>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <template for:each={programOptions} for:item="program">
+                                <li key={program.value} data-value={program.value} onclick={handleProgramSelect}>
+                                    {program.label}
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </template>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5" style="margin-left: 14px;">
+                <lightning-button label="Search" variant="brand" onclick={handleSearch}></lightning-button>
+            </div>
+            
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5" style="width: 100px; margin-left: 10px;">
+                <lightning-combobox
+                    name="year1"
+                    value={selectedYear1}
+                    placeholder="All"
+                    options={year1Options}
+                    onchange={handleYear1Change}>
+                </lightning-combobox>
+            </div>
+            
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5" style="width: 116px; margin-left: 10px;">
+                <lightning-combobox
+                    name="years"
+                    value={selectedYear}
+                    placeholder="Year"
+                    options={yearOptions}
+                    onchange={handleYearChange}>
+                </lightning-combobox>
+            </div>
+            
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-5" style="width: 100px;">
+                <lightning-combobox
+                    name="semister"
+                    value={selectedSemister}
+                    placeholder="Semester"
+                    options={semisterOptions}
+                    onchange={handleSemisterChange}>
+                </lightning-combobox>
+            </div>
+        </div>
+
+        <div class="slds-modal__content" style="max-height: 400px; overflow-y: auto; overflow-x: auto;">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered slds-no-row-hover" aria-label="Example table of Opportunities with vertical borders">
+                <thead>
+                    <tr class="slds-line-height_reset table-header">
+                        <th scope="col" style="background-color: #FFFECE;">S. No</th>
+                        <th scope="col" style="background-color: #FFFECE;">Program Name</th>
+                        <th scope="col" style="background-color: #FFFECE;">Students(1st Sem)</th>
+                        <th scope="col" style="background-color: #FFFECE;">Students(2nd Sem) </th>
+                        <th scope="col" style="background-color: #FFFECE;">Students(3rd Sem) </th>
+                        <th scope="col" style="background-color: #FFFECE;">Students(4th Sem) </th>
+                        <th scope="col" style="background-color: #FFFECE;">Students(5th Sem) </th>
+                        <th scope="col" style="background-color: #FFFECE;">Students(6th Sem) </th>
+                        <th scope="col" style="background-color: #FFFECE;">Students(7th Sem) </th>
+                        <th scope="col" style="background-color: #FFFECE;">Students(8th Sem) </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={visibleRecords} for:item="program" for:index="index">
+                        <tr key={program.id}>
+                            <td>{program.rowNumber}</td>
+                            <td>{program.Name}</td>
+                            <td>{program.sem1}</td>
+                            <td>{program.sem2}</td>
+                            <td>{program.sem3}</td>
+                            <td>{program.sem4}</td>
+                            <td>{program.sem5}</td>
+                            <td>{program.sem6}</td>
+                            <td>{program.sem7}</td>
+                            <td>{program.sem8}</td>
+                            
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+
+        <c-pagination record-size="5" records={allRecords} onupdate={handleUpdate}></c-pagination>
+    </div>
+</template>

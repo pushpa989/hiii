@@ -1,0 +1,89 @@
+<template>
+    <div class="mainDiv" style=" margin: auto 50px;"> 
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 ">
+                <div class="slds-grid slds-wrap slds-grid_align-center" style="justify-content: space-between; padding-bottom: 20px;">
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12 slds-box" style="border: 1px solid #F1788D; width: 209px; height: 89px;">
+                        <p class="boxText">Total Universities</p>
+                        <h1 class="boxNumber">{totalUniversities}</h1> 
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12 slds-box" style="border: 1px solid #9567E8; width: 209px; height: 89px;">
+                        <p class="boxText">Students</p>
+                        <h1 class="boxNumber">{totalStudents}</h1> 
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12 slds-box" style="border: 1px solid #00A2B3; width: 209px; height: 89px;">
+                        <p class="boxText">Mentors</p>
+                        <h1 class="boxNumber">{totalMentors}</h1> 
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12 slds-box" style="border: 1px solid #95B70B; width: 209px; height: 89px;">
+                        <p class="boxText">Programs</p>
+                        <h1 class="boxNumber">{totalPrograms}</h1> 
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-large-size_2-of-12 slds-box" style="border: 1px solid #CF3E53; width: 209px; height: 89px;">
+                        <p class="boxText">Courses</p>
+                        <h1 class="boxNumber">{totalCourses}</h1> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search slds-grid slds-wrap filter-section">        
+            <div class="slds-grid slds-grid_align-center" style="flex-direction: column;">
+                
+                <!-- CRT checkbox -->
+                <div style="display: flex; align-items: center; padding-bottom: 5px;">
+                    <label for="crt-checkbox" style="padding-right: 5px;">CRT:</label>
+                    <input type="checkbox" id="crt-checkbox" style="width: 18px; height: 18px;">
+                </div>
+                
+                <!-- University Name and Search button -->
+                <div class="search-container">
+                    <lightning-input 
+                        label="University Name" 
+                        type="text" 
+                        class="search-input">
+                    </lightning-input>
+            
+                    <lightning-button 
+                        class="search-button" 
+                        label="Search" 
+                        variant="brand" 
+                        onclick={handleSearch}>
+                    </lightning-button>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div style="padding-top: 35px;">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered slds-no-row-hover" aria-label="Example table of Opportunities with vertical borders">
+                <thead>
+                    <tr class="custom">
+                        <th style="text-align: center;">S.No</th>
+                        <th style="text-align: center;">Name of University</th>
+                        <th style="text-align: center;">No. of Programs Offered</th>
+                        <th style="text-align: center;">Students</th>
+                        <th style="text-align: center;">Mentors</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={visibleRecords} for:item="item">
+                        <tr key={item.University}>
+                            <td>{item.rowNumber}</td>
+                            <td><a href="#" onclick={handleUniversityClick} data-name={item.University}>{item.University}</a></td>
+                            <td>{item.ProgramsCount}</td>
+                            <td>{item.ContactsCount}</td>
+                            <td>{item.MentorsCount}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+
+            <c-pagination2 
+                record-size="7" 
+                records={allRecords} 
+                onupdate={handleUpdate}>
+            </c-pagination2>
+        </div>
+    </div>
+</template>
