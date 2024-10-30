@@ -1,0 +1,232 @@
+.mainContainer {
+    margin: auto 80px;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.go-back {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    gap: 0.5rem;
+}
+
+.align-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.program-selected, .university-info,.course-selected {
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    height: 37px;
+}
+.university-info{
+    background-color: #f08a157a;
+    border: 1px solid #d9b05a;
+}
+.program-selected{
+    background-color:#08ADBF;
+    border: 1px #00A2B3;
+
+}
+.course-selected{
+    background-color:#6665DD;
+    border: 1px solid #7b65dd;
+}
+.dashboard-access-box {
+    background-color:#246D9C; /* Keep the blue color */
+    width: 759px; /* Fixed width */
+    height: 118px; /* Fixed height */
+    border-radius: 20px; /* Rounded corners */
+    text-align: center;
+    margin: 20px auto; /* Center the box horizontally */
+    font-size: 14px; /* Adjust font size */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 0; /* No extra padding */
+}
+
+.dropdown-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between dropdowns */
+    padding-top: 10px; /* Optional: Space between text and dropdowns */
+}
+
+.lightning-combobox {
+    width: 200px; /* Control the width of the dropdowns */
+    font-weight: 400;
+}
+.button-dashboard {
+    padding-top: 20px;
+
+}
+@media (max-width: 768px) {
+    .dashboard-access-box {
+        width: 100%; /* Responsive width on smaller screens */
+        height: auto; /* Auto height on smaller screens */
+        padding: 10px; /* Add padding for smaller screens */
+    }
+    .dropdown-buttons {
+        flex-direction: column; /* Stack the dropdowns vertically on small screens */
+        gap: 10px; /* Space between dropdowns */
+    }
+    .lightning-combobox {
+        width: 100%; /* Ensure the comboboxes are responsive */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .mainContainer {
+        margin: auto 20px;
+    }
+    
+    
+    .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .program-selected, .university-info ,.course-selected{
+        width: 100%;
+        height: auto;
+        padding: 13px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        margin-left: 8px;
+    }
+    
+    .align-buttons {
+        display: flex;
+        padding-top: 5%;
+    }
+    
+}
+
+
+@media (max-width: 600px) and (min-width: 375px) {
+    .program-selected, .university-info ,.course-selected{
+        width: 100%;
+        height: auto;
+        padding: 13px;
+        font-size: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        margin-left: 8px;
+    }
+    
+  
+    .align-buttons {
+        display: flex;
+        padding-top: 5%;
+    }
+    
+   
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .mainContainer {
+        margin: auto 20px;
+    }
+    
+    .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Wrap the two elements in a flex container to align side by side */
+    .align-inputs {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .align-inputs {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    
+}
+
+@media (max-width: 600px) and (min-width: 375px) {
+ 
+    .align-inputs {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .mainContainer {
+        margin: auto 20px;
+    }
+
+    /* Place Student Name and Program Name in one line */
+    .align-inputs {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px; /* Reduced margin between input fields */
+    }
+    /* Place Search, Year, and Semester buttons in one line */
+    .align-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px; /* Reduced margin between buttons */
+    }
+
+    
+}
+
+@media (max-width: 576px) {
+    .align-inputs {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .align-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) and (min-width: 375px) {
+    .align-inputs {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .align-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+}

@@ -1,0 +1,50 @@
+<template>
+    <div class="progress-container">
+        <div class="progress-circle">
+            <svg viewBox="0 0 50 50">
+                <circle class="progress-bg" cx="25" cy="25" r="21.5"></circle>
+                <circle class="progress-bg" cx="25" cy="25" r="21.5"></circle>
+                <circle class="progress-bg" cx="25" cy="25" r="21.5"></circle>
+
+                <template if:true={hasProgressBar1}>
+                    <circle class="progress-bar progress-bar1" cx="25" cy="25" r="21.5"></circle>
+                </template>
+
+                <template if:true={hasProgressBar2}>
+                    <circle class="progress-bar progress-bar2" cx="25" cy="25" r="21.5"></circle>
+                </template>
+
+                <template if:true={hasProgressBar3}>
+                    <circle class="progress-bar progress-bar3" cx="25" cy="25" r="21.5"></circle>
+                </template>
+            </svg>
+            <div class="progress-text">
+                <div class="number">{number}</div>
+                <div class="description">{description}</div>
+            </div>
+        </div>
+
+        <div class="progress-legend">
+            <template if:true={hasProgressBar1}>
+                <div class="legend-item">
+                    <div class="dot red">{progressBar1}</div>
+                    <span>As per schedule</span>
+                </div>
+            </template>
+
+            <template if:true={hasProgressBar2}>
+                <div class="legend-item">
+                    <div class="dot blue">{progressBar2}</div>
+                    <span>Ahead of schedule</span>
+                </div>
+            </template>
+
+            <template if:true={hasProgressBar3}>
+                <div class="legend-item">
+                    <div class="dot purple">{progressBar3}</div>
+                    <span>Lagging behind</span>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

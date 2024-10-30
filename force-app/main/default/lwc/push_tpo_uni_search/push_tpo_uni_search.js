@@ -1,7 +1,7 @@
 import { LightningElement, track } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
 import getTopHeadersData from '@salesforce/apex/SJTC.getTopHeadersData';
-import getUniversityWiseData from '@salesforce/apex/SJTC.getUniversityWiseData';
+import getUniversities from '@salesforce/apex/push_tpo.getUniversities';
 export default class Push_tpo_uni_search extends NavigationMixin(LightningElement){
     @track totalUniversities = 0;
     @track totalStudents = 0;
@@ -31,9 +31,9 @@ export default class Push_tpo_uni_search extends NavigationMixin(LightningElemen
                 console.error('Error fetching top header data', error);
             });
 
-        getUniversityWiseData()
+            getUniversities()
             .then((result) => {
-                console.log('getUniversityWiseData', result);
+                console.log('getUniversities', result);
                 this.allRecords = result;
                 this.visibleRecords = this.getDataWithRowNumbers(this.filteredRecords.slice(0, 5)); 
             })

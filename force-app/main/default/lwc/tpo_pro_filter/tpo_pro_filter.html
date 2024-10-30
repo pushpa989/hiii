@@ -1,0 +1,56 @@
+<template>
+    <div class="mainContainer">
+        <div class="d-flex">
+            <div class="go-back" onclick={handleGoBack}>
+                <img src={goBackArrowIcon} alt="Go Back" style="width: 20px; height: 20px; margin-right: 5px;" />
+                <a href="javascript:void(0);" style="color: #000; margin-left: -9px; font-family: Poppins; font-size: 14px; font-weight: 400;">Go Back</a>
+            </div>
+            <div class="align-buttons">
+                <div class="course-selected">
+                    <p id="selected-course">Course Name: {selectedcourse}</p>
+                </div>
+                <div class="program-selected" style="background-color:#08ADBF;border: 1px #00A2B3;margin-left: 10px;">
+                    <p id="selected-program">Program Name: {selectedProgram}</p>
+                </div>
+                <div class="university-info" style="margin-left: 10px;">
+                    <p>University Name / ID: KLC Tech College</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Student Table -->
+        <div class="slds-modal__content" style="max-height: 400px; overflow-y: auto; overflow-x: auto; padding-top: 30px;">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered slds-no-row-hover" aria-label="Example table of Opportunities with vertical borders">
+                <thead>
+                    <tr class="slds-line-height_reset table-header">
+                        <th scope="col" style="background-color: #FFFECE;">S. No</th>
+                        <th scope="col" style="background-color: #FFFECE;">Program Name</th>
+                        <th scope="col" style="background-color: #FFFECE;">Total No:of courses</th>
+                        <th scope="col" style="background-color: #FFFECE;">Total students</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={allprograms} for:item="program" for:index="index">
+                        <tr key={program.id}>
+                            <td>{program.id}</td>
+                            <td>{program.Name}</td>
+                            <td>{program.noofcourses}</td>
+                            <td>{program.totalstudents}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Blue Div Box for Accessing Dashboard -->
+        <div class="dashboard-access-box">
+            <p style="color: white;">To access the full analytics dashboard, please choose the batch year, academic year, and the specific semester.</p>
+            <div class="dropdown-buttons">
+                <lightning-combobox name="batchYear"  placeholder="Batch Year" options={batchYearOptions} onchange={handleBatchYearChange}></lightning-combobox>
+                <lightning-combobox name="academicYear"  placeholder="Academic Year" options={academicYearOptions} onchange={handleAcademicYearChange}></lightning-combobox>
+                <lightning-combobox name="semester"  placeholder="Semester" options={semesterOptions} onchange={handleSemesterChange}></lightning-combobox>
+                <lightning-button label="View Dashboard" class="button-dashboard"  variant="destructive" onclick={handleViewDashboard}></lightning-button>
+            </div>
+        </div>
+    </div>
+</template>

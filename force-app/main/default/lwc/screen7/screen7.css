@@ -1,0 +1,101 @@
+.container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-size: smaller;
+    margin-bottom: 20px;
+}
+
+.go-back {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-info {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+}
+
+.course-name, .program-name, .university-name {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.progress-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.progress-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+}
+
+.module-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+canvas {
+    width: 100% !important;
+    height: 200px !important;
+}
+
+.custom-legend {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .progress-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progress-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .module-section {
+        width: 100%;
+    }
+}

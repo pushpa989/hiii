@@ -14,7 +14,7 @@
     z-index: 1000;
     width: 304px;
     font-size: 12px;
-    height: 375px;; /* Remove max height to prevent scrolling */
+    height: 375px;
 }
 ul {
     list-style-type: none;
@@ -29,6 +29,10 @@ li {
 li:hover {
     background-color: #f2f2f2;
 }
+.custom-button {
+    width: 307px; /* Fixed width for the button */
+    height: 34px; /* Fixed height for the button */
+}
 
 
    .go-back {
@@ -40,21 +44,9 @@ li:hover {
    }
    
    .align-buttons {
-       display: flex;
+       display: inline;
        justify-content: space-between;
    }
-   .skill-box {
-       display: inline-block;
-       border: 1px solid #ccc;
-       padding: 5px;
-       margin-right: 5px;
-       border-radius: 4px;
-       border-radius: 3.703px;
-       background: #A4B561;
-       color:#ffffff;
-   }
-   
-   .program-selected,
    .university-info {
        background-color: #f08a157a;
        border: 1px solid #d9b05a;
@@ -63,22 +55,7 @@ li:hover {
        text-align: center;
        height: 37px;
    }
-   
-   .pagination-wrapper {
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       margin-top: 20px;
-   }
-   .studentNameInputBox{
-        width: 300px; 
-        height: 24px;
-        padding-right: 20px;
-   }
-   .programComboBox{
-       width: 304px;  
-       height: 34px;
-   }
+
    .slds-badge {
        margin-right: 5px;
    }
@@ -91,35 +68,9 @@ li:hover {
        .mainContainer{	
             margin: auto 20px;
        }
-       .pagination-wrapper {
-           flex-direction: column;
-           align-items: flex-start;
-       }
-   
-       .pagination-wrapper  {
-           font-size: 16px;
-       }
        .d-flex {
            flex-direction: column;
            align-items: flex-start;
-       }
-       .program-selected, .university-info {
-           width: 100%;
-           height: auto;
-           padding: 13px;
-           margin-bottom: 10px;
-           border-radius: 10px;
-           margin-left: 8px;
-       }
-       .studentNameInputBox{
-        width: 400px; 
-        height: 24px;
-        padding-bottom: 10%;
-       }
-       .programComboBox{
-           width: 380px;  
-           height: 34px;
-           padding-bottom: 10%;
        }
        .align-buttons {
            display: flex;
@@ -136,29 +87,10 @@ li:hover {
        .mainContainer{	
             margin: auto 20px;
        }
-       .pagination-wrapper {
-           flex-direction: column;
-           align-items: flex-start;
-       }
-   
-       .pagination-wrapper  {
-           font-size: 16px;
-       }
-   
        .btn-skills {
            font-size: 10px;
            padding: 2px 4px;
            margin: 1px;
-       }
-       .studentNameInputBox{
-        width: 400px; 
-        height: 24px;
-        padding-bottom: 13%;
-       }
-       .programComboBox{
-           width: 380px;  
-           height: 34px;
-           padding-bottom: 10%;
        }
        .align-buttons {
            display: flex;
@@ -177,35 +109,10 @@ li:hover {
        }
    }
    @media only screen and (max-width: 600px) and (min-width: 375px){
-       .program-selected, .university-info {
-           width: 100%;
-           height: auto;
-           padding: 13px;
-           font-size: 10px;
-           margin-bottom: 10px;
-           border-radius: 10px;
-           margin-left: 8px;
-       }
-    .studentNameInputBox{
-        width: 318px; 
-        height: 24px;
-        padding-bottom: 13%;
-       }
-       .programComboBox{
-           width: 100%;
-           height: 25px;
-           padding-top: 10%;
-           padding-bottom: 15%;
-       }
        .align-buttons {
            display: flex;
            padding-top: 5%;
        
-       }
-       .btn-skills {
-           font-size: 10px;
-           padding: 2px 4px;
-           margin: 1px;
        }
    
        .searchButton{

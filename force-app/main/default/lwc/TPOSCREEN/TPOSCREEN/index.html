@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- First Section: Go Back, Course Name, Program Name, University Name -->
+    <div class="header">
+
+     <div class="go-back">
+            <i class="fa-solid fa-arrow-left" style="margin-right:4px;"></i> Go Back
+        </div>
+        <div class="course-info">
+            <div class="course-name" style="padding-right:-5px;">Course Name: Java Full Stack with React</div>
+            <div class="program-name">Programs: Java Full Stack with React(Year 2019-2023 | Sem 1-4)</div>
+            <div class="university-name">University Name: ID - ABC Tech College</div>
+        </div>
+        
+    </div>
+    <div class="course-info2">
+            
+        <div class="program-names"><span class="t">This analytics dashboard is for batch year 2023-2024, academic year 1st, and semester 1st.</span></div>
+       
+    </div>
+
+    <!-- Second Section: Progress by Schedule, Course Completion, Project Progress -->
+    <div class="progress-section">
+        <div class="progress-card card1">
+            <h3 class="progress-heading heading1">Course Progress By Schedule</h3>
+            <div class="progress-container">
+                <div class="progress-chart">
+                    <canvas id="schedule-progress" width="400" height="200"></canvas>
+                    <p class="course-info4" style="position: absolute; top: 40%; left: 52%; transform: translate(-50%, -50%); font-size: 9px;
+                          font-weight: bold; text-align: center; max-width: 120px; white-space: normal; line-height: 1.2;">
+                        150 <br /> Java Full Stack <br /> with React
+                    </p>
+                </div>
+                <div class="course-progress">
+                    <p class="legend"><span class="circle blue">40</span> <a href="#" class="legend-link">As per schedule</a></p>
+                    <p class="legend"><span class="circle purple">50</span> <a href="#" class="legend-link">AheadOfSchedule</a></p>
+                    <p class="legend"><s pan class="circle red">60</s> <a href="#" class="legend-link">Lagging behind</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="progress-card card2">
+    <h3 class="course-heading heading1" style="text-align: left;font-size:14px;">Course Completion Progress</h3>
+
+<div class="courseblock">
+    <div class="coursechart">
+        <canvas id="completion-progress"></canvas>
+        <p class="coursecompletion" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  font-weight: bold; text-align: center; max-width: 120px; white-space: normal; line-height: 0.8;">
+            <br /><span style="font-size:28px;">150</span><br/>
+            <br /><span style="opacity:50%;">Total Students</span> <br/>
+        </p>
+    </div>
+
+    <div class="progress-info">
+        <p class="legend">
+            <span class="circle green">10</span>
+            <a href="#" class="legend-link">Course completed</a>
+        </p>
+        <p class="legend">
+            <span class="circle gray">140</span>
+            <a href="#" class="legend-link">Course not completed</a>
+        </p>
+    </div>
+</div>
+</div>
+
+        
+        
+        <div class="project-progress">
+            <h3 class="progress-heading heading1">Project Progress</h3>
+            <div class="project">
+                <canvas id="project-progress" width="400" height="155"></canvas>
+            </div>
+            <div class="projectprogress-legend">
+                <p class="legend"><span class="circle red">70</span> <a href="#" class="legend-link">Not Started</a></p>
+                <p class="legend"><span class="circle blue">70</span> <a href="#" class="legend-link">In progress</a></p>
+                <p class="legend"><span class="circle green">10</span> <a href="#" class="legend-link">Completed</a></p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Third Section: Module Progress -->
+    <div class="module-section">
+        <!-- <h3>Module Progress</h3>
+        <span class="info-wrapper">
+            <span class="course-names">Course Name: Java Full Stack with React</span>
+           
+        </span> -->
+
+        <!-- <h3>Module Progress</h3>
+<div class="info-wrapper">
+    <span class="course-name">Course Name: Java Full Stack with React</span>
+    <span class="qat-online">QAT Online</span>
+</div> -->
+<div class="header2">
+    <h3>Module Progress</h3>
+    <div class="info-wrapper">
+        <span class="course-names" style="color: #1365C9;">Click on the graph bar to check the student list</span>
+       </div>
+</div>
+
+
+        
+        <div class="chart-container" style="position: relative; width: 100%; height: 350px;">
+            <!-- Canvas for Module Progress Graph -->
+            <canvas id="module-progress" width="400" height="100"></canvas>
+            <!-- Legend will be dynamically generated here -->
+            <div id="custom-legend" style="position: absolute; top: 5px; right: 10px;"></div>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>

@@ -18,7 +18,7 @@ export default class Push_tpo_programwise extends NavigationMixin(LightningEleme
     @track selectedSemister = '';
     @track selectedUniversity = '';
     @track isDropdownOpen = false;
-    @track selectedProgramLabel = 'All Programs';
+    @track selectedProgramLabel = 'ALL Programs';
 
     @track year1Options = [
         { label: '2019-2020', value: '2019-2020' },
@@ -26,7 +26,7 @@ export default class Push_tpo_programwise extends NavigationMixin(LightningEleme
         { label: '2021-2022', value: '2021-2022' },
         { label: '2022-2023', value: '2022-2023' },        
         { label: '2023-2024', value: '2023-2024' },
-        { label: 'All year', value: '' }
+        { label: 'All', value: '' }
     ];
 
     @track programOptions = [
@@ -48,13 +48,9 @@ export default class Push_tpo_programwise extends NavigationMixin(LightningEleme
         { label: 'Cloud Engineering', value: 'Cloud Engineering' },
         { label: 'All Programs', value: 'All Programs' }
     ];
+    
     toggleDropdown() {
         this.isDropdownOpen = !this.isDropdownOpen;
-    }
-
-    handleProgramSelect(event) {
-        this.selectedProgramLabel = event.target.dataset.value;
-        this.isDropdownOpen = false;
     }
 
     @track yearOptions = [
@@ -76,30 +72,44 @@ export default class Push_tpo_programwise extends NavigationMixin(LightningEleme
         { label: '8th Sem', value: '8th Sem' },
         { label: 'All Sems', value: '' }
     ];
-    @track visibleRecords = [
-        {
-            id: 1, rowNumber: 1,Name: 'Java Full Stack with React', sem1: 25,sem2: 30, sem3: 28, sem4: 32, sem5: 27,sem6: 24,sem7: 20,sem8: 18},
-        {   id: 2,rowNumber: 2, Name: 'Python Full Stack with Vue', sem1: 22,sem2: 25, sem3: 24, sem4: 30,sem5: 28, sem6: 26,sem7: 20,sem8: 16},
-        {   id: 3,rowNumber: 3, Name: 'Python Full Stack with Vue', sem1: 22,sem2: 25, sem3: 24,sem4: 30, sem5: 28, sem6: 26,sem7: 20,sem8: 16},
-        {   id: 4,rowNumber: 4, Name: 'Python Full Stack with Vue', sem1: 22,sem2: 25, sem3: 24,sem4: 30, sem5: 28, sem6: 26,sem7: 20,sem8: 16},
-        {   id: 5,rowNumber: 5, Name: 'Python Full Stack with Vue',sem1: 22,sem2: 25,sem3: 24, sem4: 30, sem5: 28, sem6: 26, sem7: 20,sem8: 16 },
-        {   id: 6,rowNumber: 6, Name: 'Python Full Stack with Vue',sem1: 22,sem2: 25,sem3: 24,sem4: 30,sem5: 28,sem6: 26,sem7: 20,sem8: 16 },
-        {   id: 7,
-            rowNumber: 7, Name: 'Python Full Stack with Vue',sem1: 22, sem2: 25,sem3: 24, sem4: 30,sem5: 28,sem6: 26,sem7: 20,sem8: 16},
-        {
-            id: 8,
-            rowNumber: 8,
-            Name: 'Python Full Stack with Vue',
-            sem1: 22,
-            sem2: 25,
-            sem3: 24,
-            sem4: 30,
-            sem5: 28,
-            sem6: 26,
-            sem7: 20,
-            sem8: 16
-        },
-      
+
+    @track allRecords = [
+        { id: 1, rowNumber: 1, Name: 'Java Full Stack with React', sem1: 25, sem2: 30, sem3: 28, sem4: 32, sem5: 27, sem6: 24, sem7: 20, sem8: 18 },
+        { id: 2, rowNumber: 2, Name: 'Python Full Stack with Vue', sem1: 22, sem2: 25, sem3: 24, sem4: 30, sem5: 28, sem6: 26, sem7: 20, sem8: 16 },
+        { id: 3, rowNumber: 3, Name: 'Python Full Stack with Vue', sem1: 22, sem2: 25, sem3: 24, sem4: 30, sem5: 28, sem6: 26, sem7: 20, sem8: 16 },
+        { id: 4, rowNumber: 4, Name: 'Python Full Stack with Vue', sem1: 22, sem2: 25, sem3: 24, sem4: 30, sem5: 28, sem6: 26, sem7: 20, sem8: 16 },
+        { id: 5, rowNumber: 5, Name: 'Python Full Stack with Vue', sem1: 22, sem2: 25, sem3: 24, sem4: 30, sem5: 28, sem6: 26, sem7: 20, sem8: 16 },
+        { id: 6, rowNumber: 6, Name: 'Python Full Stack with Vue', sem1: 22, sem2: 25, sem3: 24, sem4: 30, sem5: 28, sem6: 26, sem7: 20, sem8: 16 },
+        { id: 7, rowNumber: 7, Name: 'Python Full Stack with Vue', sem1: 22, sem2: 25, sem3: 24, sem4: 30, sem5: 28, sem6: 26, sem7: 20, sem8: 16 },
+        { id: 8, rowNumber: 8, Name: 'Python Full Stack with Vue', sem1: 22, sem2: 25, sem3: 24, sem4: 30, sem5: 28, sem6: 26, sem7: 20, sem8: 16 }
     ];
 
+    connectedCallback() {
+        setTimeout(() => {
+            this.showSpinner = false;  // Hide the spinner after data load
+        }, 1000);
+    }
+
+    handleProgramSelect(event) {
+        const selectedValue = event.currentTarget.getAttribute('data-value');
+        const selectedItem = this.programOptions.find(program => program.value === selectedValue);
+        this.selectedProgramLabel = selectedItem ? selectedItem.label : '';
+        this.isDropdownOpen = false;
+    }
+    
+    handleYear1Change(event) {
+        this.selectedYear1 = event.detail.value;
+    }
+
+    handleYearChange(event) {
+        this.selectedYear = event.detail.value;
+    }
+
+    handleSemisterChange(event) {
+        this.selectedSemister = event.detail.value;
+    }
+
+    handleUpdate(event) {
+        this.visibleRecords = event.detail.records;
+    }
 }

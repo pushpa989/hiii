@@ -1,0 +1,875 @@
+/* General body and container styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    font-size: smaller;
+    margin-bottom: 5px;
+    margin-top:8px; /* Add margin to push content down */
+}
+
+.go-back {
+    width: 82px;
+    height: 21px;
+    font-size: medium;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding-left:20px;
+}
+
+/* .course-info {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    padding-right: 10px;
+} */
+
+.course-info  {
+    padding-left: 20px;
+    border-radius: 20px;
+    color: white;
+    gap:8px;
+    display: flex;
+    align-items: center;
+    padding-right: 25px;
+    margin-right:-14px;
+
+}
+.course-info2 {
+    border-radius: 20px;
+    margin-top: -11px;
+    margin-bottom: 17px;
+    margin-right:30px;
+    color: white;
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    white-space: nowrap;
+       /* Container will fit the content */
+}
+
+.course-info2 div {
+    padding: 10px;
+   
+    border-radius: 40px;
+    color: white;
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    white-space: nowrap;
+            /* Div will fit the content */
+}
+
+.course-info div  {
+    padding: 3px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+.program-names {
+background: #246D9C;
+    padding:4px;
+  
+font-size: 12px;
+font-weight: 600;
+line-height: 15.7px;
+letter-spacing: 0.10000000149011612px;
+text-align: left;
+
+    
+}
+.program-names.t{
+    opacity:20%;
+}
+.header2 {
+    display: flex;                 /* Align h3 and info-wrapper horizontally */
+    justify-content: space-between;/* Push h3 to the left and info-wrapper to the right */
+    align-items: center;           /* Vertically center the items */
+    flex-wrap: wrap;               /* Wrap elements on smaller screens */
+    padding: 0 20px; 
+    background-color: white;              /* Add some padding to the sides */
+}
+
+h3 {
+    margin: 0;                     /* Remove default margin */
+    font-size: 18px;               /* Adjust font size for h3 */
+}
+
+.info-wrapper {
+    display: flex;                 /* Align course name and qat-online side by side */
+    gap: 12px;                     /* Gap between course name and QAT Online */
+    font-size: 13px;               /* Set font size */
+    align-items: center;           /* Vertically align the items */
+    flex-wrap: wrap;  
+                /* Allow wrapping on smaller screens */
+}
+
+.info-wrapper span {
+    padding: 10px;                  /* Padding around text */
+    border-radius: 20px;           /* Rounded corners */
+    color: white;                  /* Text color white */
+    border: 1px solid #08ADBF;
+    background: #FFFCC7;
+        /* Background color for visibility */
+}
+
+.course-names{
+    font-family: Montserrat;
+font-size: 12px;
+font-weight: 800;
+line-height: 15.7px;
+letter-spacing: 0.10000000149011612px;
+text-align: left;
+
+
+}
+
+@media (max-width: 768px) {
+    .header2 {
+        flex-direction: column;    /* Stack h3 and info-wrapper vertically on small screens */
+        align-items: flex-start;   /* Align items to the left */
+    }
+    .info-wrapper {
+        justify-content: flex-start;/* Align course info elements to the left */
+    }
+}
+
+
+
+
+.course-name {
+    background-color: #6465ff;
+    width: 220px;
+    height: 25px;
+    padding-left:6px;
+    font-family: Montserrat;
+font-size: 12px;
+font-weight: 700;
+line-height: 15.7px;
+letter-spacing: 0.10000000149011612px;
+text-align: left;
+
+}
+
+.program-name {
+    background-color: #01c1e4;
+    width: 340px;
+   
+    height: 25px;
+    padding-left:4px;
+    font-family: Montserrat;
+font-size: 12px;
+font-weight: 700;
+line-height: 15.7px;
+letter-spacing: 0.10000000149011612px;
+text-align: left;
+
+}
+
+.university-name {
+ background: #FFB384;
+    ;
+    width: 215px;
+    height: 25px;
+    padding:10px;
+    font-family: Montserrat;
+font-size: 12px;
+font-weight: 500;
+line-height: 15.7px;
+letter-spacing: 0.10000000149011612px;
+text-align: left;
+color: #333333;
+
+}
+
+/* Progress Section Styling */
+.progress-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    margin-top: -15px;
+    height:237px;
+    gap:2px;
+}
+
+/* .heading1{
+   
+} */
+.progress-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    /* padding: 20px; */
+    
+}
+.card1{
+    width: 32%;
+    margin-right:-5px;
+    padding-left: 15px;
+}
+
+.card2{
+    width: 22%;
+    /* margin:3px; */
+    padding-left: 15px;
+}
+
+.progress-info{
+    margin-top:-30px;
+}
+
+.project-progress{
+background-color: white;
+border-radius: 10px;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+width:36%;
+/* width: Fixed (426px)px; */
+height: Fixed (237px)px;
+top: 192px;
+left: 793px;
+padding: 4px 0px px 10px;
+gap: 10px;
+border-radius: 10px ;
+opacity: 0px;
+
+}
+
+.progress-card .card1{
+      
+/* width: Fixed (265px)px; */
+height: Fixed (237px)px;
+top: 192px;
+left: 507px;
+padding: 20px 0px 0px 0px;
+gap: 6px;
+border-radius: 10px 0px 0px 0px;
+opacity: 0px;
+
+
+}
+
+.progress-heading {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left;
+    padding-left: 10px;
+    margin-left: 9px;
+    padding-top: 14px;
+}
+
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress-chart {
+    width: 50%;
+    height: 150px;
+    position: relative;
+}
+
+.courseblock{
+    /* width: 220px;
+    height:10px; */
+    margin-top: 10px;
+    ;
+}
+.coursechart {
+    width: 190px; /* Decreased width */
+    height: 180px; /* Decreased height */
+    margin: 0 auto; /* Center the chart */
+    margin-top: -45px;
+    position: relative;
+    padding-left: 15px; /* Add padding on the left */
+    padding-right: 20px; /* Add padding on the right */
+}
+
+canvas {
+    width: 100% !important; /* Ensure the canvas fills the container */
+    height: 100% !important;
+    border: 10px;
+}
+
+
+.course-progress {
+    width: 70%;
+    padding-left: 1px;
+}
+
+.course-heading{
+    text-align: left;
+    size: 14px;
+    padding-left: 10px;
+    padding-top: 14px;
+}
+
+.progress-heading{
+    text-align: left;
+    size: 14px;
+    padding-top: 14px;
+}
+/* Legend styling */
+.legend {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.circle{
+    width: 31px;
+    height: 22px;
+}
+
+.legend .circle {
+    width: 31px;
+    height: 22px;
+    border-radius: 50%;
+    margin-right: 9px;
+    margin-left: 20px;
+}
+/* .project-progress-legend{
+
+} */
+
+.circle {
+    width: 40px; /* Set width and height to make it a perfect circle */
+    height: 40px;
+    border-radius: 50%; /* Makes the element a circle */
+    background-color: #ff6f61; /* Set your desired background color */
+    color: white; /* Text color */
+    display: flex; /* Use flexbox for centering text */
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
+    font-size: 14px; /* Adjust font size for the text inside */
+    font-weight: bold; /* Optional: make the text bold */
+    text-align: center;
+    margin-right: 5px; /* Add space between the circle and the following text */
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+ .project{
+    width: 400px;
+    padding:0px 0px 0px 40px;
+    margin-bottom: 5px;
+
+ }
+.legend-link {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.span{
+    size:10%;
+}
+
+.blue { background-color: #0000ff; color: white; }
+.purple { background-color: #9b59b6; color: white; }
+.red { background-color: #e74c3c; color: white; }
+.green { background-color: #27ae60; color: white; }
+.gray { background-color: #95a5a6; color: white; }
+
+/* Module Section Styling */
+.module-section {
+  width: 92%;
+  /* height: 430px; */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-left: 35px;
+    margin-right: 30px;
+}
+.projectprogress-legend {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    gap: 6px; /* Adjust gap between items */
+    padding-left: 9px;
+    padding-top: 9px;
+    margin-top: -25px;
+    padding-left:40px; /* Move legend closer to the graph */
+    position: relative;
+    flex-wrap: wrap; /* Ensure items wrap when the container is too small */
+    width: 100%; /* Ensure legend uses full width */
+    word-wrap: break-word; /* Allow text to break if needed */
+}
+
+.legend {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0; /* Prevent the items from shrinking */
+    white-space: nowrap; /* Prevent the text from wrapping unnecessarily */
+}
+
+.legend .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.legend-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 12px;
+    white-space: nowrap; /* Keep legend text in a single line */
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .projectprogress-legend {
+        flex-wrap: wrap; /* Allow the legend to wrap on smaller screens */
+        justify-content: center; /* Center-align the legend on small screens */
+    }
+
+    .legend {
+        margin-bottom: 10px;
+    }
+}
+
+/* Custom Legend */
+#custom-legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.legend-box {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .progress-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progress-card, .project-progress {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .progress-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progress-chart, .course-progress {
+        width: 100%;
+        text-align: center;
+    }
+
+    .course-progress {
+        margin-top: 15px;
+    }
+
+    .projectprogress-legend {
+        display: flex;
+    justify-content: space-around; /* Adjust this if you want to change spacing */
+    align-items: center;
+    gap: 20px; 
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- First Section: Go Back, Course Name, Program Name, University Name -->
+    <div class="header">
+
+     <div class="go-back">
+            <i class="fa-solid fa-arrow-left" style="margin-right:4px;"></i> Go Back
+        </div>
+        <div class="course-info">
+            <div class="course-name" style="padding-right:-5px;">Course Name: Java Full Stack with React</div>
+            <div class="program-name">Programs: Java Full Stack with React(Year 2019-2023 | Sem 1-4)</div>
+            <div class="university-name">University Name: ID - ABC Tech College</div>
+        </div>
+        
+    </div>
+    <div class="course-info2">
+            
+        <div class="program-names"><span class="t">This analytics dashboard is for batch year 2023-2024, academic year 1st, and semester 1st.</span></div>
+       
+    </div>
+
+    <!-- Second Section: Progress by Schedule, Course Completion, Project Progress -->
+    <div class="progress-section">
+        <div class="progress-card card1">
+            <h3 class="progress-heading heading1">Course Progress By Schedule</h3>
+            <div class="progress-container">
+                <div class="progress-chart">
+                    <canvas id="schedule-progress" width="400" height="200"></canvas>
+                    <p class="course-info4" style="position: absolute; top: 40%; left: 52%; transform: translate(-50%, -50%); font-size: 9px;
+                          font-weight: bold; text-align: center; max-width: 120px; white-space: normal; line-height: 1.2;">
+                        150 <br /> Java Full Stack <br /> with React
+                    </p>
+                </div>
+                <div class="course-progress">
+                    <p class="legend"><span class="circle blue">40</span> <a href="#" class="legend-link">As per schedule</a></p>
+                    <p class="legend"><span class="circle purple">50</span> <a href="#" class="legend-link">AheadOfSchedule</a></p>
+                    <p class="legend"><s pan class="circle red">60</s> <a href="#" class="legend-link">Lagging behind</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="progress-card card2">
+    <h3 class="course-heading heading1" style="text-align: left;font-size:14px;">Course Completion Progress</h3>
+
+<div class="courseblock">
+    <div class="coursechart">
+        <canvas id="completion-progress"></canvas>
+        <p class="coursecompletion" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);  font-weight: bold; text-align: center; max-width: 120px; white-space: normal; line-height: 0.8;">
+            <br /><span style="font-size:28px;">150</span><br/>
+            <br /><span style="opacity:50%;">Total Students</span> <br/>
+        </p>
+    </div>
+
+    <div class="progress-info">
+        <p class="legend">
+            <span class="circle green">10</span>
+            <a href="#" class="legend-link">Course completed</a>
+        </p>
+        <p class="legend">
+            <span class="circle gray">140</span>
+            <a href="#" class="legend-link">Course not completed</a>
+        </p>
+    </div>
+</div>
+</div>
+
+        
+        
+        <div class="project-progress">
+            <h3 class="progress-heading heading1">Project Progress</h3>
+            <div class="project">
+                <canvas id="project-progress" width="400" height="155"></canvas>
+            </div>
+            <div class="projectprogress-legend">
+                <p class="legend"><span class="circle red">70</span> <a href="#" class="legend-link">Not Started</a></p>
+                <p class="legend"><span class="circle blue">70</span> <a href="#" class="legend-link">In progress</a></p>
+                <p class="legend"><span class="circle green">10</span> <a href="#" class="legend-link">Completed</a></p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Third Section: Module Progress -->
+    <div class="module-section">
+        <!-- <h3>Module Progress</h3>
+        <span class="info-wrapper">
+            <span class="course-names">Course Name: Java Full Stack with React</span>
+           
+        </span> -->
+
+        <!-- <h3>Module Progress</h3>
+<div class="info-wrapper">
+    <span class="course-name">Course Name: Java Full Stack with React</span>
+    <span class="qat-online">QAT Online</span>
+</div> -->
+<div class="header2">
+    <h3>Module Progress</h3>
+    <div class="info-wrapper">
+        <span class="course-names" style="color: #1365C9;">Click on the graph bar to check the student list</span>
+       </div>
+</div>
+
+
+        
+        <div class="chart-container" style="position: relative; width: 100%; height: 350px;">
+            <!-- Canvas for Module Progress Graph -->
+            <canvas id="module-progress" width="400" height="100"></canvas>
+            <!-- Legend will be dynamically generated here -->
+            <div id="custom-legend" style="position: absolute; top: 5px; right: 10px;"></div>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>
+document.addEventListener('DOMContentLoaded', function () {
+    const ctx1 = document.getElementById('schedule-progress').getContext('2d');
+
+    const scheduleProgress = new Chart(ctx1, {
+        type: 'doughnut',
+        data: {
+            labels: ['As per schedule', 'Ahead of schedule', 'Lagging behind'],
+            datasets: [{
+                label: 'Course Progress',
+                data: [40, 50, 60],  // Sample data
+                backgroundColor: ['#f86d7d', '#6295f8', '#615cff'],  // Custom colors
+                borderColor: '#ffffff',  // White gaps between segments
+                borderWidth: 5,  // Adjust the gap size
+                borderRadius: 6  // This makes the edges rounded
+            }]
+        },
+        options: {
+            cutout: '70%',  // Creates space inside the doughnut chart
+            plugins: {
+                legend: {
+                    display: false  // Hides the legend
+                },
+                tooltip: {
+                    enabled: true  // Tooltips are enabled
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false
+        }
+    });
+    
+    const ctx = document.getElementById('completion-progress').getContext('2d');
+
+const completionprogress = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Completed', 'Not Completed'],
+        datasets: [{
+            data: [100, 50], // Change these values as needed
+            backgroundColor: ['#28a745', '#dcdcdc'],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false, // Allow the canvas to resize properly
+        cutout: '90%',
+        rotation: -90, // Starts the chart at the top
+        circumference: 180, // Half circle
+        plugins: {
+            legend: {
+                display: false // Remove legend from the chart
+            },
+            tooltip: {
+                enabled: false // Disable tooltips
+            }
+        }
+    }
+});
+
+    // Project Progress Graph
+const ctx3 = document.getElementById('project-progress').getContext('2d');
+const projectProgress = new Chart(ctx3, {
+    type: 'bar',
+    data: {
+        labels: ['Not started', 'In progress', 'Completed'], // Labels will be hidden
+        datasets: [{
+            data: [70, 70, 15],
+            backgroundColor: ['#ff6384', '#36a2eb', '#4caf50'],
+            borderRadius: 10,
+            barThickness: 50,  // Adjust bar thickness
+            borderWidth: 0  // Remove border from bars
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: false,
+                min: 10,
+                max: 70,
+                ticks: {
+                    stepSize: 10
+                },
+                grid: {
+                    display: false  // Remove horizontal grid lines
+                }
+            },
+            x: {
+                grid: {
+                    display: false  // Remove vertical grid lines
+                },
+                ticks: {
+                    display: false  // Remove x-axis labels
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                display: false  // Hide legend
+            },
+            tooltip: {
+                enabled: true  // Enable tooltips
+            }
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        barPercentage: 0.8,  // Adjust bar width
+        categoryPercentage: 0.2,  // Decrease spacing between bars
+    }
+});
+
+    const ctx5 = document.getElementById('module-progress').getContext('2d');
+
+const moduleProgressChart = new Chart(ctx5, {
+    type: 'bar',
+    data: {
+        labels: ['Module 1', 'Module 2', 'Module 3','Module 4','Module 5','Module 6','Module 7','Module 8','Module 9','Module 10','Module 11'],  // Display only the first 3 modules
+        datasets: [
+            {
+                label: 'Completed',
+                data: [100, 70, 60],
+                backgroundColor: '#27ae60'  // Green
+            },
+            {
+                label: 'Reading',
+                data: [50, 60, 40],
+                backgroundColor: '#0d6efd'  // Blue
+            },
+            {
+                label: 'Skipped',
+                data: [30, 20, 10],
+                backgroundColor: '#e74c3c'  // Red
+            },
+            {
+                label: 'No data',
+                data: [20, 30, 40],
+                backgroundColor: '#95a5a6'  // Gray
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: false  // Hide legend from below the chart
+            },
+            tooltip: {
+                callbacks: {
+                    label: function (tooltipItem) {
+                        return tooltipItem.dataset.label + ': ' + tooltipItem.raw + ' students';
+                    }
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                min: 0,      // Start y-axis from 0
+                max: 150,    // Set y-axis maximum value to 150
+                ticks: {
+                    stepSize: 10  // Set the gap between ticks to 10 units
+                },
+                title: {
+                    display: true,
+                    text: 'Students'
+                },
+                grid: {
+                    display: false  // Remove grid lines on the y-axis
+                }
+            },
+            x: {
+                title: {
+                    display: false,
+                    text: 'Modules'
+                },
+                grid: {
+                    display: false,
+                    drawBorder: true, // Remove grid lines on the x-axis
+                    borderColor: 'black', // Set border color
+                    borderWidth: 2 // Set border width (thickness)
+                }
+            }
+        }
+    }
+});
+
+// Create a custom legend container
+const legendContainer = document.getElementById('custom-legend');
+legendContainer.style.backgroundColor = '#fffacd';  // Light yellow background
+legendContainer.style.padding = '8px';
+legendContainer.style.borderRadius = '10px';
+legendContainer.style.boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.1)';  // Add a subtle shadow
+legendContainer.style.display = 'flex'; // Use flex to align items vertically
+legendContainer.style.flexDirection = 'column'; // Set direction to column
+
+const legendItems = [
+    { color: '#27ae60', text: 'Completed' },  // Green
+    { color: '#0d6efd', text: 'Reading' },    // Blue
+    { color: '#e74c3c', text: 'Skipped' },    // Red
+    { color: '#95a5a6', text: 'No data' }     // Gray
+];
+
+// Generate legend items
+legendItems.forEach(item => {
+    const legendItem = document.createElement('div');
+    legendItem.style.display = 'flex'; // Flex for item alignment
+    legendItem.style.alignItems = 'center';
+    legendItem.style.marginBottom = '3px';
+    legendItem.style.fontSize='10px';
+
+    
+    const colorBox = document.createElement('span');
+    colorBox.style.width = '12px';
+    colorBox.style.height = '12px';
+    colorBox.style.borderRadius = '50%';
+    colorBox.style.backgroundColor = item.color;
+    colorBox.style.display = 'inline-block';
+    colorBox.style.marginRight = '9px';
+    
+    const text = document.createElement('span');
+    text.innerText = item.text;
+    
+    legendItem.appendChild(colorBox);
+    legendItem.appendChild(text);
+    legendContainer.appendChild(legendItem);
+});
+
+   
+
+});
